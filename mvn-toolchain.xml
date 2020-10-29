@@ -1,13 +1,13 @@
-    <?xml version="1.0" encoding="UTF8"?>
-    <toolchains>
-      <!-- JDK toolchains -->
-      <toolchain>
-        <type>jdk</type>
-        <provides>
-          <version>1.8</version>
-        </provides>
-        <configuration>
-          <jdkHome>/root/.cache/yb/workspaces/c52ddf65534b/build/java/jdk8u252-b09</jdkHome>
-        </configuration>
-      </toolchain>
-    </toolchains>
+<?xml version="1.0" encoding="UTF8"?>
+<toolchains>
+  <!-- JDK toolchains -->
+  <toolchain>
+    <type>jdk</type>
+    <provides>
+      <version>1.8</version>
+    </provides>
+    <configuration>
+      <jdkHome>/root/.cache/yb/workspaces/c52ddf65534b/build/java/jdk8u252-b09</jdkHome>
+    </configuration>
+  </toolchain>
+</toolchains>
