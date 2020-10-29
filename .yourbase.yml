@@ -10,7 +10,7 @@ build_targets:
     commands:
       - mkdir -p /root/.m2
       - cp mvn-toolchain.xml /root/.m2/toolchains.xml
-      - mvn -B deploy checkstyle:checkstyle -Psrc,doc,jenkins -e
+      - mvn clean package checkstyle:checkstyle -Psrc,doc,jenkins -e
 ci:
   builds:
     - name: default
