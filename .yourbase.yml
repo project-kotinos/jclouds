@@ -8,6 +8,8 @@ build_targets:
     container:
       image: yourbase/yb_ubuntu:18.04
     commands:
+      - mkdir -p /root/.m2
+      - cp mvn-toolchains.xml /root/.m2/toolchains.xml
       - mvn -B deploy checkstyle:checkstyle -Psrc,doc,jenkins -e
 ci:
   builds:
