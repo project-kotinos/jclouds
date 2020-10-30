@@ -7,6 +7,9 @@ build_targets:
   - name: default
     container:
       image: yourbase/yb_ubuntu:18.04
+    environment:
+      - LANG=C.UTF-8
+      - LC_ALL=C.UTF-8
     commands:
       - mkdir -p /root/.m2
       - cp mvn-toolchain.xml /root/.m2/toolchains.xml
