@@ -13,7 +13,7 @@ build_targets:
     commands:
       - mkdir -p /root/.m2
       - cp mvn-toolchain.xml /root/.m2/toolchains.xml
-      - mvn clean package checkstyle:checkstyle -Psrc,doc,jenkins -e
+      - mvn clean package checkstyle:checkstyle -Psrc,doc,jenkins -e -Drat.numUnapprovedLicenses=100
 ci:
   builds:
     - name: default
