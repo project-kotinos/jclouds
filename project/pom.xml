@@ -271,7 +271,7 @@
             the dependencies that are shaded are included as normal dependencies too, causing
             duplicate class issues.
             This exclusion makes sure projects including the shaded version don't get the original
-            gson dependency as well. 
+            gson dependency as well.
           -->
           <exclusion>
             <groupId>org.apache.jclouds</groupId>
@@ -467,7 +467,7 @@
       <plugin>
         <groupId>io.yourbase</groupId>
         <artifactId>yourbase-maven-plugin</artifactId>
-        <version>1.1.6-SNAPSHOT</version>
+        <version>1.1.8-SNAPSHOT</version>
         <executions>
           <execution>
             <id>yb-init</id>
