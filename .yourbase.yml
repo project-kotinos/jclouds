@@ -11,6 +11,7 @@ build_targets:
     environment:
       - LANG=C.UTF-8
       - LC_ALL=C.UTF-8
+      - AGENT_NO_ACCELERATION=1
     commands:
       - mkdir -p /root/.m2
       - cp mvn-toolchain.xml /root/.m2/toolchains.xml
