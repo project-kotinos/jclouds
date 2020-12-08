@@ -11,6 +11,17 @@ build_targets:
     environment:
       - LANG=C.UTF-8
       - LC_ALL=C.UTF-8
+    commands:
+      - mkdir -p /root/.m2
+      - cp mvn-toolchain.xml /root/.m2/toolchains.xml
+      - mvn install checkstyle:checkstyle -Psrc -e -Drat.numUnapprovedLicenses=100
+
+  - name: default-with-accel
+    container:
+      image: yourbase/yb_ubuntu:18.04
+    environment:
+      - LANG=C.UTF-8
+      - LC_ALL=C.UTF-8
       - JAVA_TOOL_OPTIONS=-javaagent:/opt/yb/tmp/yourbase-junit-agent.jar
     commands:
       - mkdir -p /root/.m2
@@ -58,3 +69,6 @@ ci:
   builds:
     - name: default
       build_target: default
+
+    - name: default-with-accel
+      build_target: default-with-accel
